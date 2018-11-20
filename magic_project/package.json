@@ -1,0 +1,11 @@
+{
+  "name": "magic-project",
+  "version": "1.0.0",
+  "description": "Data base of magic card",
+  "main": "index.js",
+  "author": "Godin Malo-Hernandez Romain",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
