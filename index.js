@@ -17,18 +17,21 @@ MongoClient.connect('mongodb://kretadred:budy3410@ds119024.mlab.com:19024/magic_
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
+  var cards = []
+  cards = db.collection('cards').find()
+  console.log(cards)
 })
 
-app.post('/quotes', (req, res) => {
-	//console.log(req.body)
-  db.collection('cards').save(req.body, (err, result) => {
-    if (err) return console.log(err)
+// app.post('/quotes', (req, res) => {
+// 	//console.log(req.body)
+//   db.collection('cards').save(req.body, (err, result) => {
+//     if (err) return console.log(err)
 
-    console.log('saved to database')
-    res.redirect('/')
-  })
-})
+//     console.log('saved to database')
+//     res.redirect('/')
+//   })
+// })
 
-app.listen(3000, function() {
-  console.log('listening on 3000')
-})
+// app.listen(3000, function() {
+//   console.log('listening on 3000')
+// })
